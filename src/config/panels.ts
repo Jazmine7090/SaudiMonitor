@@ -865,6 +865,193 @@ const COMMODITY_MOBILE_MAP_LAYERS: MapLayers = {
 };
 
 // ============================================
+// SAUDI VARIANT (Saudi Arabia & GCC)
+// ============================================
+const SAUDI_PANELS: Record<string, PanelConfig> = {
+  // Priority 1: visible on first load
+  map: { name: 'Gulf Map', enabled: true, priority: 1 },
+  'live-news': { name: 'Saudi Headlines', enabled: true, priority: 1 },
+  // Core news
+  middleeast: { name: 'Saudi & Gulf News', enabled: true, priority: 1 },
+  'gcc-news': { name: 'GCC Countries', enabled: true, priority: 1 },
+  security: { name: 'Gulf Security & Yemen', enabled: true, priority: 1 },
+  energy: { name: 'Saudi Energy & ARAMCO', enabled: true, priority: 1 },
+  markets: { name: 'Tadawul & GCC Markets', enabled: true, priority: 1 },
+  // Priority 2: load after above panels
+  vision2030: { name: 'Vision 2030 & Mega-Projects', enabled: true, priority: 2 },
+  hajj: { name: 'Hajj & Holy Sites', enabled: true, priority: 2 },
+  'saudi-sports': { name: 'Saudi Sports', enabled: true, priority: 2 },
+  'energy-complex': { name: 'Energy Complex', enabled: true, priority: 2 },
+  commodities: { name: 'Oil & Commodities', enabled: true, priority: 2 },
+  'hormuz-tracker': { name: 'Hormuz Trade Tracker', enabled: true, priority: 2 },
+  'gulf-economies': { name: 'Gulf Economies', enabled: true, priority: 2 },
+  'gcc-investments': { name: 'GCC & PIF Investments', enabled: true, priority: 2 },
+  'trade-policy': { name: 'Trade & Sanctions', enabled: true, priority: 2 },
+  'sanctions-pressure': { name: 'Sanctions Pressure', enabled: true, priority: 2 },
+  economic: { name: 'Macro Stress', enabled: true, priority: 2 },
+  'supply-chain': { name: 'Supply Chain', enabled: true, priority: 2, ...(_desktop && { premium: 'enhanced' as const }) },
+  // Intelligence & analysis
+  intel: { name: 'Gulf Intel Feed', enabled: true, priority: 2 },
+  'gdelt-intel': { name: 'Gulf Intelligence', enabled: true, priority: 2, ...(_desktop && { premium: 'enhanced' as const }) },
+  thinktanks: { name: 'MENA Think Tanks', enabled: true, priority: 2 },
+  // AI
+  insights: { name: 'AI Gulf Insights', enabled: true, priority: 1 },
+  'strategic-posture': { name: 'AI Gulf Posture', enabled: true, priority: 2 },
+  cii: { name: 'Gulf Stability Index', enabled: true, priority: 1, ...(_desktop && { premium: 'enhanced' as const }) },
+  'strategic-risk': { name: 'Gulf Risk Overview', enabled: true, priority: 2, ...(_desktop && { premium: 'enhanced' as const }) },
+  forecast: { name: 'Gulf Forecasts', enabled: true, priority: 2, ...(_desktop && { premium: 'locked' as const }) },
+  // Correlation
+  cascade: { name: 'Infrastructure Cascade', enabled: true, priority: 2 },
+  'military-correlation': { name: 'Gulf Force Posture', enabled: true, priority: 2 },
+  'escalation-correlation': { name: 'Regional Escalation Monitor', enabled: true, priority: 2 },
+  'economic-correlation': { name: 'Economic Warfare', enabled: true, priority: 2 },
+  // Data tracking
+  'ucdp-events': { name: 'UCDP Conflict Events', enabled: true, priority: 2 },
+  displacement: { name: 'UNHCR Displacement', enabled: true, priority: 2 },
+  'disease-outbreaks': { name: 'Disease Outbreaks', enabled: true, priority: 2 },
+  climate: { name: 'Climate & Dust Storms', enabled: true, priority: 2 },
+  'airline-intel': { name: 'Gulf Aviation Intelligence', enabled: true, priority: 2 },
+  'social-velocity': { name: 'Social Velocity', enabled: true, priority: 2 },
+  'security-advisories': { name: 'Travel Advisories', enabled: true, priority: 2 },
+  'radiation-watch': { name: 'Radiation Watch', enabled: true, priority: 2 },
+  // Markets extras
+  polymarket: { name: 'Gulf Predictions', enabled: true, priority: 2 },
+  'macro-signals': { name: 'Market Regime', enabled: true, priority: 2 },
+  crypto: { name: 'Crypto', enabled: true, priority: 2 },
+  // Misc
+  'oref-sirens': { name: 'Israel Sirens', enabled: true, priority: 2, ...(_desktop && { premium: 'locked' as const }) },
+  'telegram-intel': { name: 'Gulf Telegram Intel', enabled: true, priority: 2, ...(_desktop && { premium: 'locked' as const }) },
+  'world-clock': { name: 'Gulf Time Zones', enabled: true, priority: 2 },
+  monitors: { name: 'My Monitors', enabled: true, priority: 2 },
+  // Premium AI
+  'chat-analyst': { name: 'Gulf Analyst', enabled: true, priority: 2, premium: 'locked' as const },
+  'market-implications': { name: 'AI Market Implications', enabled: true, priority: 2, premium: 'locked' as const },
+  'deduction': { name: 'Deduct Situation', enabled: true, priority: 2, premium: 'locked' as const },
+};
+
+const SAUDI_MAP_LAYERS: MapLayers = {
+  iranAttacks: !_desktop,
+  gpsJamming: false,
+  satellites: false,
+
+  conflicts: true,
+  bases: !_desktop,
+  cables: false,
+  pipelines: true,
+  hotspots: true,
+  ais: true,
+  nuclear: false,
+  irradiators: false,
+  radiationWatch: false,
+  sanctions: true,
+  weather: true,
+  economic: true,
+  waterways: true,
+  outages: true,
+  cyberThreats: false,
+  datacenters: false,
+  protests: false,
+  flights: false,
+  military: true,
+  natural: true,
+  spaceports: false,
+  minerals: false,
+  fires: false,
+  // Data source layers
+  ucdpEvents: false,
+  displacement: false,
+  climate: false,
+  // Tech layers (disabled)
+  startupHubs: false,
+  cloudRegions: false,
+  accelerators: false,
+  techHQs: false,
+  techEvents: false,
+  // Finance layers (Gulf-focused)
+  stockExchanges: false,
+  financialCenters: false,
+  centralBanks: false,
+  commodityHubs: false,
+  gulfInvestments: true,
+  // Happy variant layers (disabled)
+  positiveEvents: false,
+  kindness: false,
+  happiness: false,
+  speciesRecovery: false,
+  renewableInstallations: false,
+  tradeRoutes: true,
+  ciiChoropleth: false,
+  dayNight: false,
+  // Commodity layers (disabled)
+  miningSites: false,
+  processingPlants: false,
+  commodityPorts: true,
+  webcams: false,
+  weatherRadar: false, diseaseOutbreaks: false,
+};
+
+const SAUDI_MOBILE_MAP_LAYERS: MapLayers = {
+  iranAttacks: true,
+  gpsJamming: false,
+  satellites: false,
+
+  conflicts: true,
+  bases: false,
+  cables: false,
+  pipelines: false,
+  hotspots: true,
+  ais: false,
+  nuclear: false,
+  irradiators: false,
+  radiationWatch: false,
+  sanctions: true,
+  weather: true,
+  economic: true,
+  waterways: false,
+  outages: true,
+  cyberThreats: false,
+  datacenters: false,
+  protests: false,
+  flights: false,
+  military: false,
+  natural: true,
+  spaceports: false,
+  minerals: false,
+  fires: false,
+  // Data source layers
+  ucdpEvents: false,
+  displacement: false,
+  climate: false,
+  // Tech layers (disabled)
+  startupHubs: false,
+  cloudRegions: false,
+  accelerators: false,
+  techHQs: false,
+  techEvents: false,
+  // Finance layers
+  stockExchanges: false,
+  financialCenters: false,
+  centralBanks: false,
+  commodityHubs: false,
+  gulfInvestments: true,
+  // Happy variant layers (disabled)
+  positiveEvents: false,
+  kindness: false,
+  happiness: false,
+  speciesRecovery: false,
+  renewableInstallations: false,
+  tradeRoutes: false,
+  ciiChoropleth: false,
+  dayNight: false,
+  // Commodity layers (disabled)
+  miningSites: false,
+  processingPlants: false,
+  commodityPorts: false,
+  webcams: false,
+  weatherRadar: false, diseaseOutbreaks: false,
+};
+
+// ============================================
 // UNIFIED PANEL REGISTRY
 // ============================================
 
@@ -872,6 +1059,7 @@ const COMMODITY_MOBILE_MAP_LAYERS: MapLayers = {
 export const ALL_PANELS: Record<string, PanelConfig> = {
   ...HAPPY_PANELS,
   ...COMMODITY_PANELS,
+  ...SAUDI_PANELS,
   ...TECH_PANELS,
   ...FINANCE_PANELS,
   ...FULL_PANELS,
@@ -884,6 +1072,7 @@ export const VARIANT_DEFAULTS: Record<string, string[]> = {
   finance:   Object.keys(FINANCE_PANELS),
   commodity: Object.keys(COMMODITY_PANELS),
   happy:     Object.keys(HAPPY_PANELS),
+  saudi:     Object.keys(SAUDI_PANELS),
 };
 
 /**
@@ -908,6 +1097,11 @@ export const VARIANT_PANEL_OVERRIDES: Partial<Record<string, Partial<Record<stri
   },
   happy: {
     map:         { name: 'World Map' },
+  },
+  saudi: {
+    map:         { name: 'Gulf Map' },
+    'live-news': { name: 'Saudi Headlines' },
+    insights:    { name: 'AI Gulf Insights' },
   },
 };
 
@@ -950,25 +1144,29 @@ export const DEFAULT_PANELS: Record<string, PanelConfig> = Object.fromEntries(
   )
 );
 
-export const DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy' 
-  ? HAPPY_MAP_LAYERS 
-  : SITE_VARIANT === 'tech' 
-    ? TECH_MAP_LAYERS 
-    : SITE_VARIANT === 'finance' 
-      ? FINANCE_MAP_LAYERS 
+export const DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
+  ? HAPPY_MAP_LAYERS
+  : SITE_VARIANT === 'tech'
+    ? TECH_MAP_LAYERS
+    : SITE_VARIANT === 'finance'
+      ? FINANCE_MAP_LAYERS
       : SITE_VARIANT === 'commodity'
         ? COMMODITY_MAP_LAYERS
-        : FULL_MAP_LAYERS;
+        : SITE_VARIANT === 'saudi'
+          ? SAUDI_MAP_LAYERS
+          : FULL_MAP_LAYERS;
 
-export const MOBILE_DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy' 
-  ? HAPPY_MOBILE_MAP_LAYERS 
-  : SITE_VARIANT === 'tech' 
-    ? TECH_MOBILE_MAP_LAYERS 
-    : SITE_VARIANT === 'finance' 
-      ? FINANCE_MOBILE_MAP_LAYERS 
+export const MOBILE_DEFAULT_MAP_LAYERS = SITE_VARIANT === 'happy'
+  ? HAPPY_MOBILE_MAP_LAYERS
+  : SITE_VARIANT === 'tech'
+    ? TECH_MOBILE_MAP_LAYERS
+    : SITE_VARIANT === 'finance'
+      ? FINANCE_MOBILE_MAP_LAYERS
       : SITE_VARIANT === 'commodity'
         ? COMMODITY_MOBILE_MAP_LAYERS
-        : FULL_MOBILE_MAP_LAYERS;
+        : SITE_VARIANT === 'saudi'
+          ? SAUDI_MOBILE_MAP_LAYERS
+          : FULL_MOBILE_MAP_LAYERS;
 
 /** Maps map-layer toggle keys to their data-freshness source IDs (single source of truth). */
 export const LAYER_TO_SOURCE: Partial<Record<keyof MapLayers, DataSourceId[]>> = {

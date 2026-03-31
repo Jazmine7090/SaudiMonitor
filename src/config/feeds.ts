@@ -286,6 +286,137 @@ export const SOURCE_TIERS: Record<string, number> = {
   'AI News': 4,
   'Layoffs News': 4,
 
+  // Tier 1-2 - Saudi & GCC Sources
+  'Saudi Press Agency': 1,
+  'Arab News': 2,
+  'Saudi Gazette': 2,
+  'Asharq Al-Awsat': 2,
+  'Asharq Business': 2,
+  'Al Arabiya EN': 2,
+  'Al Arabiya AR': 2,
+  'Al-Eqtisadiah': 2,
+  'Aleqt': 2,
+  'SABQ': 2,
+  'Al-Riyadh': 3,
+  'Okaz': 3,
+  'Al-Watan SA': 3,
+  'Makkah Newspaper': 3,
+  'Al Madina': 3,
+  'Akhbaar24': 3,
+  'Saudi 24': 3,
+  'Gulf News': 2,
+  'The National UAE': 2,
+  'Khaleej Times': 2,
+  'Emirates 247': 3,
+  'WAM UAE': 1,
+  'Qatar Tribune': 3,
+  'Peninsula Qatar': 3,
+  'QNA Qatar': 1,
+  'Doha News': 3,
+  'Kuwait News Agency': 1,
+  'Kuwait Times': 3,
+  'Oman Observer': 3,
+  'Oman News Agency': 1,
+  'Times of Oman': 3,
+  'Bahrain News Agency': 1,
+  'Gulf Daily News': 3,
+  'Arabian Business': 2,
+  'Gulf Business': 2,
+  'CNBC Arabia': 2,
+  'NEOM News': 2,
+  'Saudi Aramco News': 1,
+  'Saudi Aramco': 1,
+  'Saudi Oil Ministry': 1,
+  'Saudi Vision 2030': 1,
+  'Vision 2030': 1,
+  'NEOM': 2,
+  'THE LINE': 2,
+  'Red Sea Project': 2,
+  'Qiddiya': 2,
+  'Diriyah Gate': 2,
+  'ROSHN': 2,
+  'AlUla': 2,
+  'Oxagon': 3,
+  'PIF Deals': 1,
+  'Saudi Giga-Projects': 2,
+  'Saudi Tourism': 2,
+  'Saudi Privatization': 2,
+  'SABIC': 2,
+  "Ma'aden": 2,
+  'Saudi Gas & LNG': 2,
+  'Saudi Renewables': 2,
+  'Oil & Gas Journal': 3,
+  'Reuters Energy Gulf': 1,
+  'S&P Global Platts Gulf': 2,
+  'Saudi Banking': 2,
+  'Saudi Real Estate': 3,
+  'Gulf Sukuk & Bonds': 3,
+  'Saudi Inflation': 3,
+  'IMF & World Bank Gulf': 2,
+  'Tadawul Daily': 2,
+  'Tadawul IPOs': 2,
+  'Aramco Stock': 1,
+  'GCC Markets': 2,
+  'Brent Crude': 2,
+  'SAR & Gulf FX': 3,
+  'Saudi Stocks': 2,
+  'Bloomberg Gulf': 2,
+  'FT Gulf': 2,
+  'Yemen War': 2,
+  'Houthi Red Sea': 2,
+  'Iran-Saudi': 2,
+  'Saudi Defense': 1,
+  'Gaza & KSA Impact': 2,
+  'Gulf Naval': 2,
+  'Saudi-Israel Normalization': 3,
+  'Iraq-Gulf Border': 3,
+  'Saudi Cyber Threats': 2,
+  'Piracy Red Sea': 2,
+  'Hajj Season': 1,
+  'Ministry of Hajj': 1,
+  'Makkah Development': 2,
+  'Madinah Development': 2,
+  'Islamic Affairs': 2,
+  'Umrah Visa': 2,
+  'Saudi Pro League': 3,
+  'Ronaldo Saudi': 3,
+  'LIV Golf': 3,
+  'Saudi F1 GP': 3,
+  'Saudi Boxing': 3,
+  'Saudi Sports Investments': 2,
+  'Saudi 2034 World Cup': 2,
+  'WWE Saudi': 3,
+  'Yemen Humanitarian': 2,
+  'CrisisWatch MENA': 2,
+  'UNHCR Gulf': 2,
+  'WHO MENA': 2,
+  'Saudi Aid': 2,
+  'Middle East Eye': 2,
+  'Middle East Institute': 3,
+  'Al-Monitor': 2,
+  'Al-Monitor Gulf': 2,
+  'Gulf Intelligence': 2,
+  'GCC Stat': 2,
+  'Reuters MENA': 1,
+  'OPEC+': 1,
+  'Brent & WTI': 2,
+  'Saudi Economy': 2,
+  'GCC Finance': 2,
+  'Yemen Conflict': 2,
+  'Houthi Threats': 2,
+  'Iran-Gulf': 2,
+  'Gulf Security': 2,
+  'Israel-Palestine': 2,
+  'Red Sea Shipping': 2,
+  'Red Sea Energy': 2,
+  'Gulf Intelligence': 2,
+  'Saudi Energy': 1,
+  'OPEC Watch': 1,
+  'Saudi GCC': 2,
+  'PIF News': 1,
+  'Saudi Aramco News': 1,
+  'NEOM News': 2,
+
   // Tier 2 - Positive News Sources (Happy variant)
   'Good News Network': 2,
   'Positive.News': 2,
@@ -388,6 +519,65 @@ export const SOURCE_TYPES: Record<string, SourceType> = {
   // New verified think tanks
   'War on the Rocks': 'intel', 'AEI': 'intel', 'Responsible Statecraft': 'intel',
   'FPRI': 'intel', 'Jamestown': 'intel',
+
+  // Saudi & GCC government
+  'Saudi Press Agency': 'gov', 'WAM UAE': 'gov', 'QNA Qatar': 'gov',
+  'Kuwait News Agency': 'gov', 'Oman News Agency': 'gov', 'Bahrain News Agency': 'gov',
+  'Saudi Oil Ministry': 'gov', 'Saudi Aramco': 'gov', 'Saudi Aramco News': 'gov',
+  'Ministry of Hajj': 'gov', 'Saudi Vision 2030': 'gov', 'Vision 2030': 'gov',
+  'Saudi Aid': 'gov', 'Saudi Defense': 'gov', 'NEOM News': 'gov',
+  'PIF Deals': 'gov', 'PIF News': 'gov',
+  // Saudi & GCC mainstream
+  'Arab News': 'mainstream', 'Saudi Gazette': 'mainstream', 'Asharq Al-Awsat': 'mainstream',
+  'Al Arabiya EN': 'mainstream', 'Al Arabiya AR': 'mainstream', 'Al Arabiya': 'mainstream',
+  'SABQ': 'mainstream', 'Al-Riyadh': 'mainstream', 'Okaz': 'mainstream',
+  'Al-Watan SA': 'mainstream', 'Makkah Newspaper': 'mainstream', 'Al Madina': 'mainstream',
+  'Akhbaar24': 'mainstream', 'Saudi 24': 'mainstream',
+  'Gulf News': 'mainstream', 'The National': 'mainstream', 'The National UAE': 'mainstream',
+  'Khaleej Times': 'mainstream', 'Emirates 247': 'mainstream',
+  'Qatar Tribune': 'mainstream', 'Peninsula Qatar': 'mainstream', 'Doha News': 'mainstream',
+  'Kuwait Times': 'mainstream', 'Oman Observer': 'mainstream', 'Times of Oman': 'mainstream',
+  'Gulf Daily News': 'mainstream', 'Middle East Eye': 'mainstream',
+  'BBC Middle East': 'mainstream', 'Al Jazeera': 'mainstream', 'Reuters MENA': 'wire',
+  // Saudi & GCC market
+  'Asharq Business': 'market', 'Al-Eqtisadiah': 'market', 'Aleqt': 'market',
+  'Arabian Business': 'market', 'Gulf Business': 'market', 'CNBC Arabia': 'market',
+  'Tadawul Daily': 'market', 'Aramco Stock': 'market', 'Tadawul IPOs': 'market',
+  'GCC Markets': 'market', 'Brent Crude': 'market', 'SAR & Gulf FX': 'market',
+  'Saudi Stocks': 'market', 'Bloomberg Gulf': 'market', 'FT Gulf': 'market',
+  'Saudi Economy': 'market', 'GCC Finance': 'market', 'Gulf Sukuk & Bonds': 'market',
+  'Saudi Banking': 'market', 'Saudi Real Estate': 'market',
+  'Saudi Inflation': 'market', 'IMF & World Bank Gulf': 'market',
+  // Saudi & GCC intel / think tanks
+  'Middle East Institute': 'intel', 'Al-Monitor': 'intel', 'Al-Monitor Gulf': 'intel',
+  'Gulf Intelligence': 'intel', 'GCC Stat': 'intel',
+  // Energy
+  'OPEC+': 'market', 'Brent & WTI': 'market', 'Saudi Energy': 'gov',
+  'OPEC Watch': 'market', 'SABIC': 'market', "Ma'aden": 'market',
+  'Oil & Gas Journal': 'market', 'Reuters Energy Gulf': 'wire',
+  'S&P Global Platts Gulf': 'market', 'Saudi Gas & LNG': 'market',
+  'Saudi Renewables': 'gov', 'Red Sea Energy': 'market', 'Red Sea Shipping': 'intel',
+  // Security
+  'Yemen War': 'intel', 'Houthi Red Sea': 'intel', 'Iran-Saudi': 'intel',
+  'Gulf Naval': 'intel', 'Saudi-Israel Normalization': 'intel',
+  'Iraq-Gulf Border': 'intel', 'Saudi Cyber Threats': 'intel', 'Piracy Red Sea': 'intel',
+  'Gaza & KSA Impact': 'mainstream', 'Gulf Security': 'intel',
+  'Yemen Conflict': 'intel', 'Houthi Threats': 'intel', 'Iran-Gulf': 'intel',
+  // Hajj & sports
+  'Hajj Season': 'gov', 'Makkah Development': 'gov', 'Madinah Development': 'gov',
+  'Islamic Affairs': 'gov', 'Umrah Visa': 'gov',
+  'Saudi Pro League': 'other', 'Ronaldo Saudi': 'other', 'LIV Golf': 'other',
+  'Saudi F1 GP': 'other', 'Saudi Boxing': 'other', 'WWE Saudi': 'other',
+  'Saudi Sports Investments': 'market', 'Saudi 2034 World Cup': 'other',
+  // Vision 2030 / mega projects
+  'NEOM': 'gov', 'THE LINE': 'gov', 'Red Sea Project': 'gov', 'Qiddiya': 'gov',
+  'Diriyah Gate': 'gov', 'ROSHN': 'gov', 'AlUla': 'gov', 'Oxagon': 'gov',
+  'Saudi Giga-Projects': 'gov', 'Saudi Tourism': 'gov', 'Saudi Privatization': 'market',
+  // Crisis
+  'Yemen Humanitarian': 'gov', 'CrisisWatch MENA': 'intel',
+  'UNHCR Gulf': 'gov', 'WHO MENA': 'gov',
+  // Legacy keys kept for backward compat
+  'Saudi GCC': 'mainstream', 'Saudi GCC News': 'mainstream',
 
   // Podcasts & Newsletters
   'Acquired Podcast': 'tech', 'All-In Podcast': 'tech', 'a16z Podcast': 'tech',
@@ -1186,6 +1376,119 @@ const COMMODITY_FEEDS: Record<string, Feed[]> = {
   ],
 };
 
+// Saudi Arabia & GCC variant feeds
+const SAUDI_FEEDS: Record<string, Feed[]> = {
+  // ── Saudi Arabia primary news ──────────────────────────────────────────
+  middleeast: [
+    { name: 'Arab News', url: rss('https://news.google.com/rss/search?q=site:arabnews.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Al Arabiya EN', url: rss('https://news.google.com/rss/search?q=site:english.alarabiya.net+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Al Arabiya AR', url: rss('https://www.alarabiya.net/tools/mrss/?cat=main'), lang: 'ar' },
+    { name: 'Reuters MENA', url: rss('https://news.google.com/rss/search?q=site:reuters.com+(Saudi+OR+Gulf+OR+OPEC+OR+Yemen)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'BBC Middle East', url: rss('https://feeds.bbci.co.uk/news/world/middle_east/rss.xml') },
+    { name: 'Al Jazeera', url: { en: rss('https://www.aljazeera.com/xml/rss/all.xml'), ar: rss('https://www.aljazeera.net/aljazeerarss/a7c186be-1adb-4b11-a982-4783e765316e/4e17ecdc-8fb9-40de-a5d6-d00f72384a51') } },
+    { name: 'Asharq Al-Awsat', url: rss('https://news.google.com/rss/search?q=site:aawsat.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Gazette', url: rss('https://news.google.com/rss/search?q=site:saudigazette.com.sa+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Press Agency', url: rss('https://news.google.com/rss/search?q=site:spa.gov.sa+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Arabic Press', url: rss('https://news.google.com/rss/search?q=(site:sabq.org+OR+site:alriyadh.com+OR+site:okaz.com.sa)+when:1d&hl=ar&gl=SA&ceid=SA:ar'), lang: 'ar' },
+    { name: 'Middle East Eye', url: rss('https://news.google.com/rss/search?q=site:middleeasteye.net+(Saudi+OR+GCC+OR+Gulf)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Asharq Business', url: rss('https://asharqbusiness.com/rss.xml') },
+  ],
+
+  // ── GCC countries ──────────────────────────────────────────────────────
+  'gcc-news': [
+    { name: 'Gulf News (UAE)', url: rss('https://news.google.com/rss/search?q=site:gulfnews.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'The National UAE', url: rss('https://news.google.com/rss/search?q=site:thenationalnews.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Peninsula Qatar', url: rss('https://news.google.com/rss/search?q=site:thepeninsulaqatar.com+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Kuwait News Agency', url: rss('https://news.google.com/rss/search?q=site:kuna.net.kw+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Oman Observer', url: rss('https://www.omanobserver.om/rssFeed/1') },
+    { name: 'Bahrain News Agency', url: rss('https://news.google.com/rss/search?q=site:bna.bh+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'GCC Region', url: rss('https://news.google.com/rss/search?q=(GCC+OR+"Gulf+Cooperation+Council")+(summit+OR+statement+OR+economy+OR+policy)+when:3d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Vision 2030 & mega-projects ────────────────────────────────────────
+  'vision2030': [
+    { name: 'Vision 2030', url: rss('https://news.google.com/rss/search?q=("Vision+2030"+OR+"Saudi+Vision+2030")+when:14d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'NEOM & Giga-Projects', url: rss('https://news.google.com/rss/search?q=(NEOM+OR+"The+Line"+OR+Qiddiya+OR+Diriyah+OR+"Red+Sea+Global"+OR+Trojena+OR+AlUla+OR+ROSHN)+when:30d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'PIF Investments', url: rss('https://news.google.com/rss/search?q=("Public+Investment+Fund"+OR+"PIF+Saudi")+(investment+OR+deal+OR+acquisition)+when:14d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Development', url: rss('https://news.google.com/rss/search?q=("Saudi+IPO"+OR+"Tadawul+listing"+OR+"Saudi+tourism"+OR+"Visit+Saudi"+OR+"Saudi+privatization")+when:14d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Investment News', url: rss('https://news.google.com/rss/search?q=site:arabnews.com+(NEOM+OR+"Vision+2030"+OR+PIF+OR+investment+OR+project)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── ARAMCO & oil sector ────────────────────────────────────────────────
+  energy: [
+    { name: 'Saudi Aramco', url: rss('https://news.google.com/rss/search?q=("Saudi+Aramco"+OR+Aramco)+(production+OR+earnings+OR+dividend+OR+deal)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'OPEC+', url: rss('https://news.google.com/rss/search?q=(OPEC+OR+"OPEC+cut"+OR+"oil+quota"+OR+"OPEC+meeting")+(decision+OR+output+OR+quota)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Oil Prices', url: rss('https://news.google.com/rss/search?q=(Brent+crude+OR+WTI+OR+"oil+price"+OR+"crude+oil")+(price+OR+barrel+OR+forecast)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Energy & SABIC', url: rss('https://news.google.com/rss/search?q=("Saudi+energy+minister"+OR+SABIC+OR+Maaden+OR+"Saudi+gas"+OR+"Saudi+renewable")+when:5d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Red Sea Shipping', url: rss('https://news.google.com/rss/search?q=("Red+Sea"+OR+"Strait+of+Hormuz"+OR+"Bab+el-Mandeb")+(tanker+OR+shipping+OR+oil+OR+transit)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Reuters Energy Gulf', url: rss('https://news.google.com/rss/search?q=site:reuters.com+(Saudi+oil+OR+OPEC+OR+Aramco+OR+Gulf+energy)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Gulf economies ─────────────────────────────────────────────────────
+  'gulf-economies': [
+    { name: 'Saudi Economy', url: rss('https://news.google.com/rss/search?q=("Saudi+economy"+OR+"Saudi+GDP"+OR+"Saudi+budget"+OR+"non-oil+GDP")+when:3d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Asharq Business', url: rss('https://asharqbusiness.com/rss.xml') },
+    { name: 'GCC Finance', url: rss('https://news.google.com/rss/search?q=(GCC+OR+UAE+OR+Qatar)+(economy+OR+market+OR+investment+OR+GDP)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Banking & Real Estate', url: rss('https://news.google.com/rss/search?q=("Al+Rajhi+Bank"+OR+"Saudi+National+Bank"+OR+SNB+OR+"Saudi+real+estate"+OR+ROSHN)+(earnings+OR+profit+OR+development)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Gulf Islamic Finance', url: rss('https://news.google.com/rss/search?q=("Saudi+sukuk"+OR+"Gulf+bonds"+OR+"Islamic+finance"+OR+"IMF+Saudi")+when:7d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Tadawul & stock markets ────────────────────────────────────────────
+  markets: [
+    { name: 'Tadawul & Saudi Stocks', url: rss('https://news.google.com/rss/search?q=(Tadawul+OR+TASI+OR+"Saudi+stock+exchange"+OR+"Al+Rajhi"+OR+STC+OR+"Saudi+National+Bank")+(market+OR+stock+OR+earnings)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Aramco Stock', url: rss('https://news.google.com/rss/search?q=("Saudi+Aramco+shares"+OR+"Aramco+stock"+OR+"Aramco+dividend")+(stock+OR+earnings+OR+price)+when:3d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'GCC Markets', url: rss('https://news.google.com/rss/search?q=("DFM"+OR+"ADX"+OR+"Boursa+Kuwait"+OR+"Bahrain+Bourse")+(market+OR+stocks+OR+index)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Bloomberg Gulf', url: rss('https://news.google.com/rss/search?q=site:bloomberg.com+(Saudi+OR+GCC+OR+"Gulf+market")+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'FT Gulf', url: rss('https://news.google.com/rss/search?q=site:ft.com+(Saudi+OR+Aramco+OR+GCC)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Security: Yemen, Houthi, Iran, Gulf ───────────────────────────────
+  security: [
+    { name: 'Yemen & Houthi', url: rss('https://news.google.com/rss/search?q=(Yemen+OR+Houthi+OR+"Ansar+Allah")+(attack+OR+conflict+OR+missile+OR+drone+OR+ceasefire)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Houthi Red Sea', url: rss('https://news.google.com/rss/search?q=(Houthi+OR+"Red+Sea+attack"+OR+"Bab+el-Mandeb")+(ship+OR+drone+OR+missile+OR+tanker)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Iran-Saudi & Gulf Security', url: rss('https://news.google.com/rss/search?q=(Iran+Saudi+OR+"Saudi+defense"+OR+"Saudi+military"+OR+SANG+OR+"Gulf+naval")+(relations+OR+attack+OR+tension+OR+exercise)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Diplomacy', url: rss('https://news.google.com/rss/search?q=("Saudi+Israel"+OR+"Saudi+normalization"+OR+Gaza+Saudi+OR+"Saudi+foreign+policy")+(talks+OR+reaction+OR+statement)+when:3d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Gulf Naval & Piracy', url: rss('https://news.google.com/rss/search?q=(piracy+OR+hijack+OR+"Fifth+Fleet"+OR+"US+Navy+Gulf"+OR+"ship+seized")+"Red+Sea"+OR+"Gulf+of+Aden"+when:3d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Hajj, Umrah & holy sites ──────────────────────────────────────────
+  'hajj': [
+    { name: 'Makkah & Madinah', url: rss('https://news.google.com/rss/search?q=(Makkah+OR+Madinah+OR+"Grand+Mosque"+OR+Kaaba+OR+"Masjid+al-Haram"+OR+"Masjid+al-Nabawi")+when:14d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Hajj & Umrah', url: rss('https://news.google.com/rss/search?q=(Hajj+OR+Umrah+OR+"Saudi+pilgrims"+OR+"Hajj+season"+OR+"Umrah+visa")+when:30d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Islamic Affairs', url: rss('https://news.google.com/rss/search?q=("Muslim+World+League"+OR+OIC+Saudi+OR+"Saudi+Islamic+affairs"+OR+"Ministry+of+Hajj")+when:30d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Saudi sports ──────────────────────────────────────────────────────
+  'saudi-sports': [
+    { name: 'Saudi Football', url: rss('https://news.google.com/rss/search?q=("Saudi+Pro+League"+OR+SPL+OR+"Al-Hilal"+OR+"Al-Nassr"+OR+"Al-Ahli"+OR+"Al-Ittihad")+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Saudi Sports', url: rss('https://news.google.com/rss/search?q=(Ronaldo+Saudi+OR+"LIV+Golf"+OR+"Saudi+Grand+Prix"+OR+"Saudi+boxing"+OR+"2034+World+Cup"+OR+WWE+Saudi+OR+"PIF+sports")+when:14d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Think tanks & analysis ─────────────────────────────────────────────
+  thinktanks: [
+    { name: 'Al-Monitor Gulf', url: rss('https://news.google.com/rss/search?q=site:al-monitor.com+(Saudi+OR+Gulf+OR+Iran+OR+Yemen)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Middle East Institute', url: rss('https://news.google.com/rss/search?q=site:mei.edu+(Saudi+OR+Gulf+OR+Yemen)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Atlantic Council MENA', url: rss('https://news.google.com/rss/search?q=site:atlanticcouncil.org+(Saudi+OR+Gulf+OR+Iran)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'International Crisis Group', url: rss('https://www.crisisgroup.org/rss') },
+    { name: 'Chatham House MENA', url: rss('https://news.google.com/rss/search?q=site:chathamhouse.org+(Saudi+OR+Gulf+OR+MENA)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'War on the Rocks', url: rss('https://warontherocks.com/feed') },
+  ],
+
+  // ── Crisis / humanitarian ──────────────────────────────────────────────
+  crisis: [
+    { name: 'Yemen Humanitarian', url: rss('https://news.google.com/rss/search?q=(Yemen+humanitarian+OR+"Yemen+famine"+OR+"Yemen+aid"+OR+OCHA+Yemen)+when:3d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'CrisisWatch MENA', url: rss('https://www.crisisgroup.org/rss') },
+    { name: 'UNHCR & WHO Gulf', url: rss('https://news.google.com/rss/search?q=(UNHCR+OR+WHO)+(Yemen+OR+Saudi+OR+"Middle+East")+(humanitarian+OR+health+OR+aid)+when:7d&hl=en-US&gl=US&ceid=US:en') },
+  ],
+
+  // ── Finance / global context ──────────────────────────────────────────
+  finance: [
+    { name: 'Reuters Business Gulf', url: rss('https://news.google.com/rss/search?q=site:reuters.com+(Saudi+OR+OPEC+OR+Aramco+OR+Gulf+finance)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Bloomberg Gulf', url: rss('https://news.google.com/rss/search?q=site:bloomberg.com+(Saudi+OR+GCC+OR+Aramco+OR+OPEC)+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'CNBC', url: rss('https://www.cnbc.com/id/100003114/device/rss/rss.html') },
+  ],
+};
+
 // Variant-aware exports
 export const FEEDS = SITE_VARIANT === 'tech'
   ? TECH_FEEDS
@@ -1195,7 +1498,9 @@ export const FEEDS = SITE_VARIANT === 'tech'
       ? HAPPY_FEEDS
       : SITE_VARIANT === 'commodity'
         ? COMMODITY_FEEDS
-        : FULL_FEEDS;
+        : SITE_VARIANT === 'saudi'
+          ? SAUDI_FEEDS
+          : FULL_FEEDS;
 
 export const SOURCE_REGION_MAP: Record<string, { labelKey: string; feedKeys: string[] }> = {
   // Full (geopolitical) variant regions

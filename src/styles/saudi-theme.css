@@ -1,0 +1,253 @@
+/* ============================================================
+   Saudi Monitor Variant Theme — Kingdom Green & White
+   Saudi national colors: deep green #006C35, white #FFFFFF.
+   Unlayered CSS — wins over main.css which is wrapped in
+   @layer base by base-layer.css (@import ... layer(base)).
+   ============================================================ */
+
+/* ---------- Saudi Dark Mode (default) ---------- */
+:root[data-variant="saudi"],
+:root[data-variant="saudi"][data-theme="dark"] {
+  /* Backgrounds — dark desert night with green undertones */
+  --bg: #0A100C;
+  --bg-secondary: #0F1811;
+  --surface: #131E15;
+  --surface-hover: #1A2A1D;
+  --surface-active: #1F3222;
+
+  /* Borders */
+  --border: #1E3024;
+  --border-strong: #2A4030;
+  --border-subtle: #172219;
+
+  /* Text */
+  --text: #E8F0EA;
+  --text-secondary: #B8CEC0;
+  --text-dim: #7A9A82;
+  --text-muted: #567060;
+  --text-faint: #3A5040;
+  --text-ghost: #2A3C30;
+  --accent: #E8F0EA;
+
+  /* Overlays & shadows */
+  --overlay-subtle: rgba(0, 108, 53, 0.03);
+  --overlay-light: rgba(0, 108, 53, 0.06);
+  --overlay-medium: rgba(0, 108, 53, 0.10);
+  --overlay-heavy: rgba(0, 108, 53, 0.16);
+  --shadow-color: rgba(0, 0, 0, 0.40);
+  --darken-light: rgba(0, 0, 0, 0.15);
+  --darken-medium: rgba(0, 0, 0, 0.25);
+  --darken-heavy: rgba(0, 0, 0, 0.40);
+
+  /* Scrollbar */
+  --scrollbar-thumb: #2A4030;
+  --scrollbar-thumb-hover: #3A5840;
+
+  /* Input */
+  --input-bg: #0F1811;
+
+  /* Panels */
+  --panel-bg: #131E15;
+  --panel-border: #1E3024;
+
+  /* Map */
+  --map-bg: #0C1A10;
+  --map-grid: #152018;
+  --map-country: #1A3020;
+  --map-stroke: #1E3024;
+
+  /* Primary action / highlight — Saudi green */
+  --primary: #006C35;
+  --primary-hover: #00843F;
+  --primary-active: #005228;
+  --primary-text: #FFFFFF;
+  --primary-subtle: rgba(0, 108, 53, 0.15);
+  --primary-ring: rgba(0, 108, 53, 0.40);
+
+  /* Accent green for badges, dots, live indicators */
+  --live-dot: #00A847;
+  --badge-bg: rgba(0, 108, 53, 0.20);
+  --badge-text: #4DCC80;
+
+  /* Header */
+  --header-bg: #0A100C;
+  --header-border: #1A2A1D;
+
+  /* Typography */
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ---------- Saudi Light Mode ---------- */
+:root[data-variant="saudi"][data-theme="light"] {
+  /* Backgrounds */
+  --bg: #F5FAF6;
+  --bg-secondary: #EDF5EF;
+  --surface: #FFFFFF;
+  --surface-hover: #EDF7EF;
+  --surface-active: #DFF0E4;
+
+  /* Borders */
+  --border: #C0DECA;
+  --border-strong: #99C8AA;
+  --border-subtle: #D8EEE0;
+
+  /* Text */
+  --text: #0A1E10;
+  --text-secondary: #1E4A28;
+  --text-dim: #3D7050;
+  --text-muted: #5E9070;
+  --text-faint: #88B898;
+  --text-ghost: #B0D0BC;
+  --accent: #004D25;
+
+  /* Overlays & shadows */
+  --overlay-subtle: rgba(0, 108, 53, 0.03);
+  --overlay-light: rgba(0, 108, 53, 0.06);
+  --overlay-medium: rgba(0, 108, 53, 0.10);
+  --overlay-heavy: rgba(0, 108, 53, 0.15);
+  --shadow-color: rgba(0, 60, 20, 0.10);
+  --darken-light: rgba(0, 60, 20, 0.05);
+  --darken-medium: rgba(0, 60, 20, 0.10);
+  --darken-heavy: rgba(0, 60, 20, 0.18);
+
+  /* Scrollbar */
+  --scrollbar-thumb: #99C8AA;
+  --scrollbar-thumb-hover: #6AAA80;
+
+  /* Input */
+  --input-bg: #EDF5EF;
+
+  /* Panels */
+  --panel-bg: #FFFFFF;
+  --panel-border: #C0DECA;
+
+  /* Map */
+  --map-bg: #D4EAD8;
+  --map-grid: #C0DCC8;
+  --map-country: #B0D4B8;
+  --map-stroke: #99C0A8;
+
+  /* Primary action / highlight */
+  --primary: #006C35;
+  --primary-hover: #005228;
+  --primary-active: #004020;
+  --primary-text: #FFFFFF;
+  --primary-subtle: rgba(0, 108, 53, 0.10);
+  --primary-ring: rgba(0, 108, 53, 0.30);
+
+  /* Accent */
+  --live-dot: #006C35;
+  --badge-bg: rgba(0, 108, 53, 0.12);
+  --badge-text: #004D25;
+
+  /* Header */
+  --header-bg: #FFFFFF;
+  --header-border: #C0DECA;
+
+  /* Typography */
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ---------- Saudi-specific UI overrides ---------- */
+
+/* Header: Saudi green top border stripe */
+:root[data-variant="saudi"] .header {
+  border-top: 3px solid #006C35;
+}
+
+/* Active variant pill: Saudi green highlight */
+:root[data-variant="saudi"] .variant-option.active {
+  background: rgba(0, 108, 53, 0.20);
+  color: #4DCC80;
+  border-color: rgba(0, 108, 53, 0.40);
+}
+
+/* Logo text in Saudi green */
+:root[data-variant="saudi"] .logo {
+  color: #4DCC80;
+  letter-spacing: 0.08em;
+}
+
+/* Live indicator dot — bright Saudi green */
+:root[data-variant="saudi"] .status-dot {
+  background: #00A847;
+  box-shadow: 0 0 6px rgba(0, 168, 71, 0.70);
+}
+
+/* Breaking news banner uses Saudi green */
+:root[data-variant="saudi"] .breaking-banner {
+  background: linear-gradient(90deg, #004D25 0%, #006C35 100%);
+  border-color: #00843F;
+}
+
+/* Panel headers — subtle Saudi green left border */
+:root[data-variant="saudi"] .panel-header {
+  border-left: 3px solid #006C35;
+}
+
+/* Primary buttons */
+:root[data-variant="saudi"] .btn-primary,
+:root[data-variant="saudi"] button[data-primary] {
+  background: #006C35;
+  color: #FFFFFF;
+  border-color: #006C35;
+}
+:root[data-variant="saudi"] .btn-primary:hover,
+:root[data-variant="saudi"] button[data-primary]:hover {
+  background: #00843F;
+  border-color: #00843F;
+}
+
+/* Variant switcher active state */
+:root[data-variant="saudi"] a.variant-option[data-variant="saudi"] {
+  background: rgba(0, 108, 53, 0.18);
+  color: #4DCC80;
+}
+
+/* Region selector — highlight MENA */
+:root[data-variant="saudi"] .region-select {
+  border-color: rgba(0, 108, 53, 0.40);
+}
+:root[data-variant="saudi"] .region-select:focus {
+  border-color: #006C35;
+  outline-color: rgba(0, 108, 53, 0.30);
+}
+
+/* Map layer toggles — Saudi green active state */
+:root[data-variant="saudi"] .layer-toggle.active,
+:root[data-variant="saudi"] input[type="checkbox"]:checked {
+  accent-color: #006C35;
+}
+
+/* Footer copyright */
+:root[data-variant="saudi"] .site-footer-copy {
+  color: #4DCC80;
+}
+
+/* Header logo subtitle — "Saudi Arabia & Gulf Intelligence" */
+:root[data-variant="saudi"] .logo-subtitle {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #4DCC80;
+  opacity: 0.80;
+  margin-left: 0.45rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Logo text — bolder Saudi identity */
+:root[data-variant="saudi"] .logo {
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+/* Footer brand name — Saudi Monitor in green */
+:root[data-variant="saudi"] .site-footer-name {
+  color: #4DCC80;
+}

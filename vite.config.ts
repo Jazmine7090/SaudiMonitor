@@ -1217,6 +1217,23 @@ export default defineConfig(({ mode }) => {
             });
           },
         },
+        // Catch-all: forward remaining /api/* calls to the production backend.
+        // This avoids CORS when developing locally — the browser hits localhost
+        // and Vite proxies server-side (no cross-origin request).
+        // Use www.worldmonitor.app directly to avoid a 301 redirect to www that
+        // the browser would follow, breaking CORS.
+        // Inject Origin so the production _api-key.js treats this as a trusted
+        // browser origin (localhost is only trusted when NODE_ENV !== production).
+        // NOTE: keep this entry LAST so the specific entries above take priority.
+        '/api': {
+          target: 'https://www.worldmonitor.app',
+          changeOrigin: true,
+          configure: (proxy) => {
+            proxy.on('proxyReq', (proxyReq) => {
+              proxyReq.setHeader('Origin', 'https://worldmonitor.app');
+            });
+          },
+        },
       },
     },
   };
