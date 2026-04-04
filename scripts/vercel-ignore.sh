@@ -1,4 +1,5 @@
 #!/bin/bash
+exit 1
 # Vercel Ignored Build Step: exit 0 = skip, exit 1 = build
 # Only build when web-relevant files change. Skip desktop, docs, scripts, CI, etc.
 
