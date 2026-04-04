@@ -134,12 +134,6 @@ Copyright (C) 2024-2026 Elie Habib. All rights reserved.
 
 **Elie Habib** — [GitHub](https://github.com/koala73)
 
-## Contributors
-
-<a href="https://github.com/koala73/worldmonitor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=koala73/worldmonitor" />
-</a>
-
 ## Security Acknowledgments
 
 We thank the following researchers for responsibly disclosing security issues:
