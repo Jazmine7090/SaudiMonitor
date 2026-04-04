@@ -16,6 +16,7 @@ const VARIANT_HOST_MAP: Record<string, string> = {
   'finance.worldmonitor.app': 'finance',
   'commodity.worldmonitor.app': 'commodity',
   'happy.worldmonitor.app': 'happy',
+  'saudi.worldmonitor.app': 'saudi',
 };
 
 // Source of truth: src/config/variant-meta.ts — keep in sync when variant metadata changes.
@@ -43,6 +44,12 @@ const VARIANT_OG: Record<string, { title: string; description: string; image: st
     description: 'Curated positive news, progress data, and uplifting stories from around the world.',
     image: 'https://happy.worldmonitor.app/favico/happy/og-image.png',
     url: 'https://happy.worldmonitor.app/',
+  },
+  saudi: {
+    title: 'Saudi Monitor - Real-Time Saudi Arabia & Gulf Intelligence Dashboard',
+    description: 'Real-time intelligence dashboard focused on Saudi Arabia and the GCC region — tracking Saudi markets, energy, security, Vision 2030, ARAMCO, and Gulf geopolitics.',
+    image: 'https://saudi.worldmonitor.app/favico/saudi/og-image.png',
+    url: 'https://saudi.worldmonitor.app/',
   },
 };
 
