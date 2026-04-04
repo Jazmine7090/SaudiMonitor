@@ -409,13 +409,10 @@ export const SOURCE_TIERS: Record<string, number> = {
   'Israel-Palestine': 2,
   'Red Sea Shipping': 2,
   'Red Sea Energy': 2,
-  'Gulf Intelligence': 2,
   'Saudi Energy': 1,
   'OPEC Watch': 1,
   'Saudi GCC': 2,
   'PIF News': 1,
-  'Saudi Aramco News': 1,
-  'NEOM News': 2,
 
   // Tier 2 - Positive News Sources (Happy variant)
   'Good News Network': 2,
@@ -538,7 +535,7 @@ export const SOURCE_TYPES: Record<string, SourceType> = {
   'Qatar Tribune': 'mainstream', 'Peninsula Qatar': 'mainstream', 'Doha News': 'mainstream',
   'Kuwait Times': 'mainstream', 'Oman Observer': 'mainstream', 'Times of Oman': 'mainstream',
   'Gulf Daily News': 'mainstream', 'Middle East Eye': 'mainstream',
-  'BBC Middle East': 'mainstream', 'Al Jazeera': 'mainstream', 'Reuters MENA': 'wire',
+  'Reuters MENA': 'wire',
   // Saudi & GCC market
   'Asharq Business': 'market', 'Al-Eqtisadiah': 'market', 'Aleqt': 'market',
   'Arabian Business': 'market', 'Gulf Business': 'market', 'CNBC Arabia': 'market',
